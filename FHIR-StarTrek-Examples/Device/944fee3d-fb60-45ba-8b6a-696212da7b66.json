@@ -1,0 +1,52 @@
+{
+    "resourceType": "Device",
+    "id": "944fee3d-fb60-45ba-8b6a-696212da7b66",
+    "meta": {
+        "security": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+                "code": "N",
+                "display": "normal"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "HTEST",
+                "display": "test health data"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "TRAIN",
+                "display": "training"
+            }
+        ],
+        "tag": [
+            {
+                "system": "https://startrek.com/database",
+                "code": "StarTrek",
+                "display": "Star Trek"
+            }
+        ]
+    },
+    "definition": {
+        "reference": "DeviceDefinition/medical-tricoder",
+        "display": "Medical Tricoder"
+    },
+    "udiCarrier": [
+        {
+            "deviceIdentifier": "944fee3d-fb60-45ba-8b6a-696212da7b66",
+            "issuer": "https://startrek.com/database"
+        }
+    ],
+    "status": "active",
+    "manufacturer": "Qualcomm",
+    "manufactureDate": "2265-11-23",
+    "serialNumber": "SN-696212da7b66",
+    "owner": {
+        "reference": "Organization/starfleet",
+        "display": "Starfleet"
+    },
+    "location": {
+        "reference": "Location/enterprise-ncc-1701-sickbay",
+        "display": "USS Enterprise Sickbay"
+    }
+}

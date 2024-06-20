@@ -1,0 +1,108 @@
+{
+    "resourceType": "Patient",
+    "meta": {
+        "security": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+                "code": "N",
+                "display": "normal"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "HTEST",
+                "display": "test health data"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "TRAIN",
+                "display": "training"
+            }
+        ],
+        "tag": [
+            {
+                "system": "https://startrek.com/database",
+                "code": "StarTrek",
+                "display": "Star Trek"
+            }
+        ]
+    },
+    "id": "yeoman-rand",
+    "identifier": [
+        {
+            "use": "official",
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MI",
+                        "display": "Military ID number"
+                    }
+                ]
+            },
+            "system": "https://startrek.com/database",
+            "value": "3F-1253C-46"
+        }
+    ],
+    "active": true,
+    "name": [
+        {
+            "use": "official",
+            "family": "Rand",
+            "given": ["Janice"],
+            "prefix": ["NCO"]
+        },
+        {
+            "use": "usual",
+            "text": "Yeoman Rand"
+        }
+    ],
+    "telecom": [
+        {
+            "system": "url",
+            "value": "https://startrek.com"
+        }
+    ],
+    "gender": "female",
+    "birthDate": "2242-04-01",
+    "maritalStatus": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                "code": "U",
+                "display": "unmarried"
+            }
+        ]
+    },
+    "photo": [
+        {
+            "contentType": "image/jpeg",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Grace_Lee_Whitney_Star_Trek_%28cropped%29.JPG",
+            "title": "Yeoman Rand"
+        }
+    ],
+    "contact": [
+        {
+            "relationship": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                            "code": "E",
+                            "display": "Employer"
+                        }
+                    ]
+                }
+            ],
+            "organization": {
+                "reference": "Organization/starfleet",
+                "display": "Starfleet"
+            }
+        }
+    ],
+    "generalPractitioner": [
+        {
+            "reference": "Practitioner/dr-mccoy",
+            "display": "Dr Leonard H. McCoy MD"
+        }
+    ]
+}

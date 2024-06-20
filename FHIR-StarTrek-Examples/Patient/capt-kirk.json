@@ -1,0 +1,114 @@
+{
+    "resourceType": "Patient",
+    "id": "capt-kirk",
+    "meta": {
+        "security": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+                "code": "N",
+                "display": "normal"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "HTEST",
+                "display": "test health data"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "TRAIN",
+                "display": "training"
+            }
+        ],
+        "tag": [
+            {
+                "system": "https://startrek.com/database",
+                "code": "StarTrek",
+                "display": "Star Trek"
+            }
+        ]
+    },
+    "identifier": [
+        {
+            "use": "official",
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MI",
+                        "display": "Military ID number"
+                    }
+                ]
+            },
+            "system": "https://startrek.com/database",
+            "value": "SC937-0176CEC"
+        }
+    ],
+    "active": true,
+    "name": [
+        {
+            "use": "official",
+            "family": "Kirk",
+            "given": ["James", "Tiberius"],
+            "prefix": ["Capt"]
+        },
+        {
+            "use": "usual",
+            "text": "Jim Kirk"
+        }
+    ],
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "323-634-5667",
+            "use": "mobile"
+        },
+        {
+            "system": "other",
+            "value": "(415) KL5-1059",
+            "use": "work"
+        }
+    ],
+    "gender": "male",
+    "birthDate": "2233-03-22",
+    "maritalStatus": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                "code": "W",
+                "display": "Widowed"
+            }
+        ]
+    },
+    "photo": [
+        {
+            "contentType": "image/jpeg",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/William_Shatner_Star_Trek.JPG",
+            "title": "James T. Kirk"
+        }
+    ],
+    "contact": [
+        {
+            "relationship": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                            "code": "E",
+                            "display": "Employer"
+                        }
+                    ]
+                }
+            ],
+            "organization": {
+                "reference": "Organization/starfleet",
+                "display": "Starfleet"
+            }
+        }
+    ],
+    "generalPractitioner": [
+        {
+            "reference": "Practitioner/dr-mccoy",
+            "display": "Dr Leonard H. McCoy MD"
+        }
+    ]
+}

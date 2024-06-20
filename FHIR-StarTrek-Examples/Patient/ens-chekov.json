@@ -1,0 +1,108 @@
+{
+    "resourceType": "Patient",
+    "id": "ens-chekov",
+    "meta": {
+        "security": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+                "code": "N",
+                "display": "normal"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "HTEST",
+                "display": "test health data"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "TRAIN",
+                "display": "training"
+            }
+        ],
+        "tag": [
+            {
+                "system": "https://startrek.com/database",
+                "code": "StarTrek",
+                "display": "Star Trek"
+            }
+        ]
+    },
+    "identifier": [
+        {
+            "use": "official",
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MI",
+                        "display": "Military ID number"
+                    }
+                ]
+            },
+            "system": "https://startrek.com/database",
+            "value": "656-5827B"
+        }
+    ],
+    "active": true,
+    "name": [
+        {
+            "use": "official",
+            "family": "Chekov",  
+            "given": ["Pavel", "Andreievich"],
+            "prefix": ["ENS"]
+        },
+        {
+            "use": "usual",
+            "text": "Mr Chekov"
+        }
+    ],
+    "telecom": [
+        {
+            "system": "url",
+            "value": "https://startrek.com"
+        }
+    ],
+    "gender": "male",
+    "birthDate": "2245-09-14",
+    "maritalStatus": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                "code": "S",
+                "display": "Never Married"
+            }
+        ]
+    },
+    "photo": [
+        {
+            "contentType": "image/jpeg",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Walter_Koenig_Star_Trek.JPG",
+            "title": "Mr Chekov"
+        }
+    ],
+    "contact": [
+        {
+            "relationship": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                            "code": "E",
+                            "display": "Employer"
+                        }
+                    ]
+                }
+            ],
+            "organization": {
+                "reference": "Organization/starfleet",
+                "display": "Starfleet"
+            }
+        }
+    ],
+    "generalPractitioner": [
+        {
+            "reference": "Practitioner/dr-mccoy",
+            "display": "Dr Leonard H. McCoy MD"
+        }
+    ]
+}

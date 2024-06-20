@@ -1,0 +1,116 @@
+{
+    "resourceType": "Patient",
+    "id": "",
+    "meta": {
+        "security": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+                "code": "N",
+                "display": "normal"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "HTEST",
+                "display": "test health data"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "TRAIN",
+                "display": "training"
+            }
+        ],
+        "tag": [
+            {
+                "system": "https://startrek.com/database",
+                "code": "StarTrek",
+                "display": "Star Trek"
+            }
+        ]
+    },
+    "identifier": [
+        {
+            "use": "official",
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MI",
+                        "display": "Military ID number"
+                    }
+                ]
+            },
+            "system": "https://startrek.com/database",
+            "value": ""
+        }
+    ],
+    "active": true,
+    "name": [
+        {
+            "use": "official",
+            "family": "",
+            "given": ["", ""],
+            "prefix": [""]
+        },
+        {
+            "use": "usual",
+            "text": ""
+        }
+    ],
+    "telecom": [
+        {
+            "system": "url",
+            "value": "https://startrek.com"
+        }
+    ],
+    "gender": "",
+    "birthDate": "",
+    "maritalStatus": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                "code": "",
+                "display": ""
+            }
+        ]
+    },
+    "photo": [
+        {
+            "contentType": "image/jpeg",
+            "url": "",
+            "title": ""
+        }
+    ],
+    "contact": [
+        {
+            "relationship": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                            "code": "E",
+                            "display": "Employer"
+                        }
+                    ]
+                }
+            ],
+            "organization": {
+                "reference": "Organization/starfleet",
+                "display": "Starfleet"
+            }
+        }
+    ],
+    "generalPractitioner": [
+        {
+            "reference": "Practitioner/dr-mccoy",
+            "display": "Dr Leonard H. McCoy MD"
+        }
+    ],
+    "link": [
+        {   
+            "other": {
+                "reference": "RelatedPerson/id"
+            },
+            "type": "seealso"
+        }
+    ]
+}

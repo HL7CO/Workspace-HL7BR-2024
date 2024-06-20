@@ -1,0 +1,57 @@
+{
+    "resourceType": "Location",
+    "id": "enterprise-ncc-1701-deck-1",
+    "meta": {
+        "security": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+                "code": "N",
+                "display": "normal"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "HTEST",
+                "display": "test health data"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "TRAIN",
+                "display": "training"
+            }
+        ],
+        "tag": [
+            {
+                "system": "https://startrek.com/database",
+                "code": "StarTrek",
+                "display": "Star Trek"
+            }
+        ]
+    },
+    "identifier": [
+        {
+            "system": "https://startrek.com/database",
+            "value": "NCC-1701-Deck-1"
+        }
+    ],
+    "status": "active",
+    "name": "USS Enterprise Deck 1",
+    "description": "Bridge",
+    "mode": "instance",
+    "physicalType": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                "code": "lvl",
+                "display": "Level"
+            }
+        ]
+    },
+    "managingOrganization": {
+        "reference": "Organization/starfleet",
+        "display": "Starfleet"
+    },
+    "partOf": {
+        "reference": "Location/enterprise-ncc-1701",
+        "display": "USS Enterprise"
+    }
+}

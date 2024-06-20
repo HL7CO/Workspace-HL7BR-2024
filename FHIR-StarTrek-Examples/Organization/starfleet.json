@@ -1,0 +1,56 @@
+{
+    "resourceType": "Organization",
+    "id": "starfleet",
+    "meta": {
+        "security": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+                "code": "N",
+                "display": "normal"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "HTEST",
+                "display": "test health data"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "TRAIN",
+                "display": "training"
+            }
+        ],
+        "tag": [
+            {
+                "system": "https://startrek.com/database",
+                "code": "StarTrek",
+                "display": "Star Trek"
+            }
+        ]
+    },
+    "active": true,
+    "type": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                    "code": "other",
+                    "display": "Other"
+                }
+            ]
+        }
+    ],
+    "name": "Starfleet",
+    "address": [
+        {
+            "use": "work",
+            "type": "physical",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "USA"
+        }
+    ],
+    "partOf": {
+        "reference": "Organization/united-federation-planets",
+        "display": "United Federation of Planets"
+    }
+}

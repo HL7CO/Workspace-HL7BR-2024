@@ -1,0 +1,164 @@
+{
+    "resourceType": "Practitioner",
+    "id": "dr-mccoy",
+    "meta": {
+        "security": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+                "code": "N",
+                "display": "normal"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "HTEST",
+                "display": "test health data"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "TRAIN",
+                "display": "training"
+            }
+        ],
+        "tag": [
+            {
+                "system": "https://startrek.com/database",
+                "code": "StarTrek",
+                "display": "Star Trek"
+            }
+        ]
+    },
+    "identifier": [
+        {
+            "use": "official",
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MI",
+                        "display": "Military ID number"
+                    }
+                ]
+            },
+            "system": "https://startrek.com/database",
+            "value": "SLC492-302MD"
+        }
+    ],
+    "active": true,
+    "name": [
+        {   
+            "use": "official",
+            "family": "McCoy",
+            "given": ["Leonard", "H"],
+            "prefix": ["Dr"],
+            "suffix": ["MD"]
+        },
+        {
+            "use": "usual",
+            "text": "Bones"
+        }
+    ],
+    "telecom": [
+        {
+            "system": "url",
+            "value": "https://startrek.com"
+        }
+    ],
+    "gender": "male",
+    "birthDate": "2227-01-20",
+    "photo": [
+        {
+            "contentType": "image/jpeg",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/DeForest_Kelley%2C_Dr._McCoy%2C_Star_Trek.jpg/461px-DeForest_Kelley%2C_Dr._McCoy%2C_Star_Trek.jpg?20161009124927",
+            "title": "Dr. McCoy"
+        }
+    ],
+    "qualification": [
+        {
+            "identifier": [
+                {
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                "code": "MD",
+                                "display": "Medical License number"
+                            }
+                        ]
+                    },
+                    "value": "MD-FE31697A"
+                }
+            ],
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "309343006",
+                        "display": "Physician (occupation)"
+                    }
+                ],
+                "text": "médico (profissão)"
+            },
+            "period": {
+                "start": "2245-04-18"
+            }
+        },
+        {
+            "identifier": [
+                {
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                "code": "MD",
+                                "display": "Medical License number"
+                            }
+                        ]
+                    },
+                    "value": "SG-FE6734A"
+                }
+            ],
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "304292004",
+                        "display": "Surgeon (occupation)"
+                    }
+                ],
+                "text": "cirurgião (profissão)"
+            },
+            "period": {
+                "start": "2245-04-18"
+            }
+        },
+        {
+            "identifier": [
+                {
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                "code": "MD",
+                                "display": "Medical License number"
+                            }
+                        ]
+                    },
+                    "value": "EB-FE1357A"
+                }
+            ],
+            "code": {
+                "coding": [
+                    {
+                        "system": "https://startrek.com/database",
+                        "code": "159133008",
+                        "display": "Exobiologist (occupation)"
+                    }
+                ],
+                "text": "Exobiologista (profissão)"
+            },
+            "period": {
+                "start": "2245-04-18"
+            }
+        }
+    ]
+}

@@ -1,0 +1,131 @@
+{
+    "resourceType": "Practitioner",
+    "id": "nr-chapel",
+    "meta": {
+        "security": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+                "code": "N",
+                "display": "normal"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "HTEST",
+                "display": "test health data"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "TRAIN",
+                "display": "training"
+            }
+        ],
+        "tag": [
+            {
+                "system": "https://startrek.com/database",
+                "code": "StarTrek",
+                "display": "Star Trek"
+            }
+        ]
+    },
+    "identifier": [
+        {
+            "use": "official",
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MI",
+                        "display": "Military ID number"
+                    }
+                ]
+            },
+            "system": "https://startrek.com/database",
+            "value": "NI-596 MT21Z"
+        }
+    ],
+    "active": true,
+    "name": [
+        {   
+            "use": "official",
+            "family": "Chapel",
+            "given": ["Christine"],
+            "prefix": ["Nr"],
+            "suffix": ["RN"]
+        }
+    ],
+    "telecom": [
+        {
+            "system": "url",
+            "value": "https://startrek.com"
+        }
+    ],
+    "gender": "female",
+    "birthDate": "2237-02-23",
+    "photo": [
+        {
+            "contentType": "image/jpeg",
+            "url": "https://upload.wikimedia.org/wikipedia/en/d/d8/Christine_Chapel_Promotional_Image.jpg?20160207103420",
+            "title": "Christine Chapel"
+        }
+    ],
+    "qualification": [
+        {
+            "identifier": [
+                {
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                "code": "LN",
+                                "display": "License number"
+                            }
+                        ]
+                    },
+                    "value": "NI-596 MT21Z"
+                }
+            ],
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "72327007",
+                        "display": "Biologist (general) (occupation)"
+                    }
+                ],
+                "text": "biólogo (geral) (ocupação)"
+            },
+            "period": {
+                "start": "2259-03-15"
+            }
+        },
+        {
+            "identifier": [
+                {
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                "code": "RN",
+                                "display": "Registered Nurse"
+                            }
+                        ]
+                    },
+                    "value": "NI-596 MT21Z"
+                }
+            ],
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "159001001",
+                        "display": "Clinic nurse (occupation)"
+                    }
+                ],
+                "text": "enfermeiro clínico (ocupação)"
+            },
+            "period": {
+                "start": "2259-03-15"
+            }
+        }
+    ]
+}

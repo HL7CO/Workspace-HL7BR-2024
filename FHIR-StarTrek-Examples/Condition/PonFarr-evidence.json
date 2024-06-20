@@ -1,0 +1,158 @@
+{
+	"resourceType": "Condition",
+    "id": "pon-farr",
+	"meta": {
+        "security": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+                "code": "N",
+                "display": "normal"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "HTEST",
+                "display": "test health data"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "TRAIN",
+                "display": "training"
+            }
+        ],
+        "tag": [
+            {
+                "system": "https://startrek.com/database",
+                "code": "StarTrek",
+                "display": "Star Trek"
+            }
+        ]
+    },
+	"clinicalStatus": {
+		"coding": [
+			{
+				"system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+				"code": "resolved",
+				"display": "Resolved"
+			}
+		]
+	},
+	"verificationStatus": {
+		"coding": [
+			{
+				"system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+				"code": "confirmed",
+				"display": "Confirmed"
+			}
+		]
+	},
+	"category": [
+		{
+			"coding": [
+				{
+					"system": "http://terminology.hl7.org/CodeSystem/condition-category",
+					"code": "encounter-diagnosis",
+					"display": "Encounter Diagnosis"
+				}
+			]
+		}
+	],
+	"severity": {
+		"coding": [
+			{
+				"system": "http://snomed.info/sct",
+				"code": "24484000",
+				"display": "Severe"
+			}
+		]
+	},
+	"code": {
+		"coding": [
+			{
+				"system": "http://hl7.org/fhir/sid/icd-10",
+				"code": "F52.7",
+				"display": "Excessive sexual drive"
+			},
+            {
+				"system": "http://snomed.info/sct",
+				"code": "268724009",
+				"display": "Excessive sexual drive (disorder)"
+			}
+		]
+	},
+	"subject": {
+		"reference": "Patient/mr-spock"
+	},
+	"onsetDateTime": "2267-03-17",
+	"abatementDateTime": "2267-03-20",
+	"recordedDate": "2267-03-19",
+	"asserter": {
+		"reference": "Practitioner/dr-mccoy"
+	},
+	"evidence": [
+		{
+			"code": [
+				{
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "",
+							"display": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"code": [
+				{
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "",
+							"display": ""
+						}
+					]
+				}
+			]
+		},
+        {
+			"code": [
+				{
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "",
+							"display": ""
+						}
+					]
+				}
+			]
+		},
+        {
+			"code": [
+				{
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "",
+							"display": ""
+						}
+					]
+				}
+			]
+		},
+        {
+			"code": [
+				{
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "",
+							"display": ""
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FHIR - Allergy Intolerance</title>
+</head>
+<body>
+    <form id="allergy-form">
+        <div>
+            <label for="patient-id">Patient ID:</label>
+            <input type="text" id="patient-id" name="patient-id" value="ens-chekov">
+        </div>
+        <div>
+            <label for="asserter-id">Asserter ID:</label>
+            <input type="text" id="asserter-id" name="asserter-id" value="dr-mccoy">
+        </div>
+        <div>
+            <label for="clinicalStatus">Clinical Status:</label>
+            <select id="clinicalStatus" name="clinicalStatus">
+                <option selected disabled>Elija una opción</option>
+                <option id="active" value="active" label="Active">Active</option>
+                <option id="inactive" value="inactive" label="Inactive">Inactive</option>
+                <option id="resolved" value="resolved" label="Resolved">Resolved</option>
+            </select>
+        </div>
+        <div>
+            <label for="verificationStatus">Verification Status:</label>
+            <select id="verificationStatus" name="verificationStatus">
+                <option selected disabled>Elija una opción</option>
+                <option id="unconfirmed" value="unconfirmed" label="Unconfirmed"></option>
+                <option id="confirmed" value="confirmed" label="Confirmed"></option>
+                <option id="refuted" value="refuted" label="Refuted"></option>
+                <option id="entered-in-error" value="entered-in-error" label="Entered in Error"></option>
+            </select>
+        </div>
+        <div>
+            <label for="category">Category:</label>
+            <select id="category" name="category">
+                <option selected disabled>Elija una opción</option>
+                <option id="food" value="food" label="Food"></option>
+                <option id="medication" value="medication" label="Medication"></option>
+                <option id="environment" value="environment" label="Environment"></option>
+                <option id="biologic" value="entered-in-error" label="Biologic"></option>
+            </select>
+        </div>
+        <div>
+            <label for="criticality">Criticality:</label>
+            <select id="criticality" name="criticality">
+                <option selected disabled>Elija una opción</option>
+                <option id="low" value="low" label="Low Risk"></option>
+                <option id="high" value="high" label="High Risk"></option>
+                <option id="unable-to-assess" value="unable-to-assess" label="Unable to Assess Risk"></option>
+            </select>
+        </div>
+        <div>
+            <label for="allergyCode">Code:</label>
+            <select id="allergyCode" name="allergyCode">
+                <option selected disabled>Elija una opción</option>
+                <option id="A01-GFDB" value="A01-GFDB" label="Anesthizine"></option>
+                <option id="A02-HJYH" value="A02-HJYH" label="Asinolyathin"></option>
+                <option id="C01-LGBE" value="C01-LGBE" label="Cortical analeptic"></option>
+                <option id="D01-R5T3" value="D01-R5T3" label="Dalaphaline"></option>
+                <option id="D02-2F7H" value="D02-2F7H" label="Dermaline"></option>
+                <option id="K01-7M9I" value="K01-7M9I" label="Kayolane"></option>
+                <option id="M01-789I" value="M01-789I" label="Metrazene"></option>
+                <option id="R01-56HJ" value="R01-56HJ" label="Retinax V"></option>
+                <option id="V01-MF97" value="V01-MF97" label="Vaccine for the Melvaran mud flea"></option>
+            </select>
+        </div>
+        <div>
+            <label for="reactionManifestation">Reaction manifestation:</label>
+            <select id="reactionManifestation" name="reactionManifestation">
+                <option selected disabled>Elija una opción</option>
+                <option id="16932000" value="16932000" label="náuseas y vómitos"></option>
+                <option id="398126006" value="398126006" label="cefalea muscular"></option>
+                <option id="191953002" value="191953002" label="disnea psicógena"></option>
+                <option id="191962000" value="191962000" label="astenia neurocirculatoria"></option>
+            </select>
+        </div>
+        <div>
+            <label for="onsetDate">Onset Date:</label>
+            <input type="date" id="onsetDate" name="onsetDate">
+        </div>
+        <div>
+            <label for="allergyNotes">Notes:</label>
+            <textarea id="allergyNotes" name="allergyNotes"></textarea>
+        </div>
+        <div>
+            <button type="submit">Create Allergy</button>
+        </div>
+    </form>
+    <script>
+const fhirEndpoint = 'http://fhirserver.hl7fundamentals.org/fhir/AllergyIntolerance/';
+const form = document.getElementById("allergy-form");
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    var FHIRpatientId = form.elements["patient-id"].value;
+    var FHIRasserterId = form.elements["asserter-id"].value;
+    var FHIRclinicalStatus = form.elements["clinicalStatus"].value;
+    var FHIRverificationStatus = form.elements["verificationStatus"].value;
+    var FHIRcategory = form.elements["category"].value;
+    var FHIRcriticality = form.elements["criticality"].value;
+    var FHIRonsetDate = form.elements["onsetDate"].value;
+    var FHIRallergyCode = form.elements["allergyCode"].value;
+    var FHIRselectAllergyCode = document.getElementById("allergyCode");
+    var FHIRselectedOptionAllergyCode = FHIRselectAllergyCode.options[FHIRselectAllergyCode.selectedIndex];
+    var FHIRselectedLabelAllergyCode = FHIRselectedOptionAllergyCode.label;
+    var FHIRreactionManifestation = form.elements["reactionManifestation"].value;
+    var FHIRselectReactionManifestation = document.getElementById("reactionManifestation");
+    var FHIRselectedOptionReactionManifestation = FHIRselectReactionManifestation.options[FHIRselectReactionManifestation.selectedIndex];
+    var FHIRselectedLabelReactionManifestation = FHIRselectedOptionReactionManifestation.label;
+    var FHIRallergyNotes = form.elements["allergyNotes"].value;
+
+    var AllergyIntolerance = {
+        resourceType: "AllergyIntolerance",
+        clinicalStatus: {
+            coding: [
+                {
+                    system: "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+                    code: FHIRclinicalStatus
+                }
+            ]
+        },
+        verificationStatus: {
+            coding: [
+                {
+                    system: "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+                    code: FHIRverificationStatus
+                }
+            ]
+        },
+        type: "allergy",
+        category: [
+            FHIRcategory
+        ],
+        criticality: FHIRcriticality,
+        code: {
+            coding: [
+                {
+                    system: "https://startrek.com/database",
+                    code: FHIRallergyCode,
+                    display: FHIRselectedLabelAllergyCode
+
+                }
+            ]
+        },
+        patient: {
+            reference: `Patient/${FHIRpatientId}`
+        },
+        onsetDateTime: FHIRonsetDate,
+        asserter: {
+            reference: `Practitioner/${FHIRasserterId}`
+        },
+        note: [
+            {
+                text: FHIRallergyNotes
+            }
+        ],
+        reaction: [
+            {
+                manifestation: [
+                    {
+                        coding: [
+                            {
+                                system: "http://snomed.info/sct",
+                                code: FHIRreactionManifestation,
+                                display: FHIRselectedLabelReactionManifestation
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    };
+
+    console.log(AllergyIntolerance);
+
+    const headers = {
+        'Content-Type': 'application/json'
+    };
+
+    const options = {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify(AllergyIntolerance)
+    };
+
+    fetch(fhirEndpoint, options)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+});
+
+
+    </script>
+</body>
+
+</html>

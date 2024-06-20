@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FHIR AllergyIntolerance Table</title>
+</head>
+<body>
+
+  <table border="1">
+    <tr>
+      <th>Substance</th>
+      <th>Clinical Status</th>
+      <th>Verification Status</th>
+      <th>Criticality</th>
+    </tr>
+    <tbody id="allergyTableBody"></tbody>
+  </table>
+
+  <script>
+    // Function to fetch and display AllergyIntolerance data
+    function fetchAllergyIntoleranceData() {
+      // Set the FHIR endpoint URL
+      var url = 'http://fhirserver.hl7fundamentals.org/fhir/AllergyIntolerance?patient=ens-chekov';
+
+      // Make the FHIR request using fetch
+      fetch(url)
+        .then(response => response.json())
+        .then(bundle => {
+          // Get the entries from the bundle
+          var entries = bundle.entry;
+
+          // Iterate through each entry and display AllergyIntolerance information
+          entries.forEach(entry => {
+            var allergyIntolerance = entry.resource;
+
+            // Create a new row in the table
+            var row = document.createElement('tr');
+
+            // Add AllergyIntolerance information to the row
+            var substance = allergyIntolerance.code.text || 'N/A';
+            var clinicalStatus = allergyIntolerance.clinicalStatus.coding[0].display || 'N/A';
+            var verificationStatus = allergyIntolerance.verificationStatus.coding[0].display || 'N/A';
+            var criticality = allergyIntolerance.criticality || 'N/A';
+
+            row.innerHTML = `<td>${substance}</td><td>${clinicalStatus}</td><td>${verificationStatus}</td><td>${criticality}</td>`;
+
+            // Append the row to the table body
+            document.getElementById('allergyTableBody').appendChild(row);
+          });
+        })
+        .catch(error => {
+          console.error('Error fetching FHIR data:', error);
+        });
+    }
+
+    // Call the function to fetch and display AllergyIntolerance data
+    fetchAllergyIntoleranceData();
+  </script>
+
+</body>
+</html>

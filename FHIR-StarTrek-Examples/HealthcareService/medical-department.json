@@ -1,0 +1,76 @@
+{
+    "resourceType": "HealthcareService",
+    "id": "medical-department",
+    "meta": {
+        "security": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+                "code": "N",
+                "display": "normal"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "HTEST",
+                "display": "test health data"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "TRAIN",
+                "display": "training"
+            }
+        ],
+        "tag": [
+            {
+                "system": "https://startrek.com/database",
+                "code": "StarTrek",
+                "display": "Star Trek"
+            }
+        ]
+    },
+    "active": true,
+    "providedBy": {
+        "reference": "Organization/starfleet",
+        "display": "Starfleet"
+    },
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/service-category",
+                    "code": "17",
+                    "display": "General Practice"
+                }
+            ]
+        }
+    ],
+    "type": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/service-type",
+                    "code": "382",
+                    "display": "Medical Services"
+                }
+            ]
+        }
+    ],
+    "specialty": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "408443003",
+                    "display": 	"General medical practice"
+                }
+            ]
+        }
+    ],
+    "location": [
+        {
+            "reference": "Location/enterprise-ncc-1701-sickbay",
+            "display": "USS Enterprise Sickbay"
+        }
+    ],
+    "name": "Medical department",
+    "comment": "The medical department or medical division was a science department aboard the USS Enterprise incorporating doctors, nurses, and medics."
+}

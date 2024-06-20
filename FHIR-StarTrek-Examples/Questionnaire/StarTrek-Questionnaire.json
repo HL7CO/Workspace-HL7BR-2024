@@ -1,0 +1,118 @@
+{
+    "resourceType": "Questionnaire",
+    "id": "StarTrek-Questionnaire",
+    "meta": {
+        "security": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+                "code": "N",
+                "display": "normal"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "HTEST",
+                "display": "test health data"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "TRAIN",
+                "display": "training"
+            }
+        ],
+        "tag": [
+            {
+                "system": "https://startrek.com/database",
+                "code": "StarTrek",
+                "display": "Star Trek"
+            }
+        ]
+    },
+    "name": "StarTrek-Questionnaire",
+    "title": "Workshop HL7 FHIR | StarTrek | Questionnaire example",
+    "status": "draft",
+    "experimental": true,
+    "effectivePeriod": {
+        "start": "2024-06-20",
+        "end": "2024-06-21"
+    },
+    "item": [
+        {
+            "linkId": "1",
+            "text": "¿Qual é o sobrenome do Sr. Spock?",
+            "type": "string",
+            "required": true
+        },
+        {
+            "linkId": "2",
+            "text": "¿Qual é a data de nascimento do Sr. Spock?",
+            "type": "string",
+            "required": true
+        },
+        {
+            "linkId": "3",
+            "text": "¿Qual é o número de identificação do Sr. Spock?",
+            "type": "string",
+            "required": true
+        },
+        {
+            "linkId": "4",
+            "text": "¿Qual é o nome completo do Capitão Kirk?",
+            "type": "string",
+            "required": true
+        },
+        {
+            "linkId": "5",
+            "text": "¿Em que data nasceu o Capitão Kirk?",
+            "type": "string",
+            "required": true
+        },
+        {
+            "linkId": "6",
+            "text": "¿Qual é o número de identificação do Capitão Kirk?",
+            "type": "string",
+            "required": true
+        },
+        {
+            "linkId": "7",
+            "text": "¿Qual é o estado civil do Capitão Kirk?",
+            "type": "string",
+            "required": true
+        },
+        {
+            "linkId": "8",
+            "text": "¿Qual é o nome completo da Tenente Uhura?",
+            "type": "string",
+            "required": true
+        },
+        {
+            "linkId": "9",
+            "text": "¿Qual é a data de nascimento da Tenente Uhura?",
+            "type": "string",
+            "required": true
+        },
+        {
+            "linkId": "10",
+            "text": "¿Qual é o estado civil do Tenente Sulu?",
+            "type": "string",
+            "required": true
+        },
+        {
+            "linkId": "11",
+            "text": "¿Quais são as qualificações profissionais do Dr McCoy?",
+            "type": "string",
+            "required": true
+        },
+        {
+            "linkId": "12",
+            "text": "¿Entre quais datas Christine Chapel desempenhou seu papel de enfermeira-chefe?",
+            "type": "string",
+            "required": true
+        },
+        {
+            "linkId": "13",
+            "text": "¿Em que convés (decô) está localizada a enfermaria da Starship Enterprise?",
+            "type": "string",
+            "required": true
+        }
+    ]
+}

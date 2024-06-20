@@ -1,0 +1,189 @@
+{
+	"resourceType": "AllergyIntolerance",
+	"id": "6c7c0b8e-1cd0-4d60-abc6-14b9b634c275",
+	"meta": {
+        "security": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+                "code": "N",
+                "display": "normal"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "HTEST",
+                "display": "test health data"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "TRAIN",
+                "display": "training"
+            }
+        ],
+        "tag": [
+            {
+                "system": "https://startrek.com/database",
+                "code": "StarTrek",
+                "display": "Star Trek"
+            }
+        ]
+    },
+	"clinicalStatus": {
+		"coding": [
+			{
+				"system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+				"code": "active",
+				"display": "Active"
+			}
+		]
+	},
+	"verificationStatus": {
+		"coding": [
+			{
+				"system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+				"code": "confirmed",
+				"display": "Confirmed"
+			}
+		]
+	},
+	"type": "intolerance",
+	"category": [
+		"food"
+	],
+	"criticality": "low",
+	"code": {
+		"coding": [
+			{
+				"system": "http://snomed.info/sct",
+				"code": "70813002",
+				"display": "Milk (substance)"
+			}
+		],
+        "text": "Alimentos lácteos"
+	},
+	"patient": {
+		"reference": "Patient/yeoman-rand"
+	},
+	"onsetAge": {
+		"value": 17,
+		"unit": "Y"
+	},
+	"recorder": {
+		"reference": "Practitioner/dr-mccoy"
+	},
+	"asserter": {
+		"reference": "Practitioner/dr-mccoy"
+	},
+	"note": [
+		{
+			"text": "Duis dolore ipsum duis ut qui qui quis dolore mollit minim."
+		}
+	],
+    "lastOccurrence": "2262-09-14",
+	"reaction": [
+		{
+			"substance": {
+				"coding": [
+					{
+						"system": "http://snomed.info/sct",
+						"code": "47703008",
+						"display": "Lactose (substance)"
+					}
+				],
+                "text": "lactose"
+			},
+			"manifestation": [
+				{
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "162068007",
+							"display": "Abdominal distension symptom (finding)"
+						}
+					],
+                    "text": "sintoma de distensão abdominal"
+				}
+			],
+			"severity": "mild",
+			"exposureRoute": {
+				"coding": [
+					{
+                        "system": "http://snomed.info/sct",
+						"code": "26643006",
+						"display": "Oral route (qualifier value)"
+					}
+				],
+                "text": "via oral"
+			}
+		},
+		{
+			"substance": {
+				"coding": [
+					{
+						"system": "http://snomed.info/sct",
+						"code": "47703008",
+						"display": "Lactose (substance)"
+					}
+				],
+                "text": "lactose"
+			},
+			"manifestation": [
+				{
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "308698004",
+							"display": "Flatulence symptom (finding)"
+						}
+					],
+                    "text": "sintoma de flatulência"
+				}
+			],
+			"severity": "moderate",
+			"exposureRoute": {
+				"coding": [
+					{
+                        "system": "http://snomed.info/sct",
+						"code": "26643006",
+						"display": "Oral route (qualifier value)"
+					}
+				],
+                "text": "via oral"
+			}
+		},
+		{
+			"substance": {
+				"coding": [
+					{
+						"system": "http://snomed.info/sct",
+						"code": "47703008",
+						"display": "Lactose (substance)"
+					}
+				],
+                "text": "lactose"
+			},
+			"manifestation": [
+				{
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "267060006",
+							"display": "Diarrhea symptom (finding)"
+						}
+					],
+                    "text": "sintoma de diarreia"
+				}
+			],
+			"severity": "mild",
+			"exposureRoute": {
+				"coding": [
+					{
+                        "system": "http://snomed.info/sct",
+						"code": "26643006",
+						"display": "Oral route (qualifier value)"
+					}
+				],
+                "text": "via oral"
+			}
+		}
+	]
+}

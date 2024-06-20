@@ -1,0 +1,129 @@
+{
+	"resourceType": "AllergyIntolerance",
+	"id": "1e4ae7e2-71ed-43f1-855d-843dc93cce3e",
+	"meta": {
+        "security": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+                "code": "N",
+                "display": "normal"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "HTEST",
+                "display": "test health data"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+                "code": "TRAIN",
+                "display": "training"
+            }
+        ],
+        "tag": [
+            {
+                "system": "https://startrek.com/database",
+                "code": "StarTrek",
+                "display": "Star Trek"
+            }
+        ]
+    },
+	"clinicalStatus": {
+		"coding": [
+			{
+				"system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+				"code": "active",
+				"display": "Active"
+			}
+		]
+	},
+	"verificationStatus": {
+		"coding": [
+			{
+				"system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+				"code": "confirmed",
+				"display": "Confirmed"
+			}
+		]
+	},
+	"type": "allergy",
+	"category": [
+		"medication"
+	],
+	"criticality": "unable-to-assess",
+	"code": {
+		"coding": [
+			{
+				"system": "http://snomed.info/sct",
+				"code": "363528007",
+				"display": "Sulfamethoxazole (substance)"
+			}
+		],
+        "text": "sulfametoxazol"
+	},
+	"patient": {
+		"reference": "Patient/yeoman-rand"
+	},
+	"onsetAge": {
+		"value": 21,
+		"unit": "Y"
+	},
+	"recorder": {
+		"reference": "Practitioner/dr-mccoy"
+	},
+	"asserter": {
+		"reference": "Practitioner/dr-mccoy"
+	},
+    "lastOccurrence": "2264-02-24",
+	"reaction": [
+		{
+			"substance": {
+				"coding": [
+					{
+						"system": "http://snomed.info/sct",
+						"code": "763875007",
+						"display": "Product containing sulfonamide (product)"
+					}
+				],
+                "text": "produto contendo sulfonamida"
+			},
+			"manifestation": [
+				{
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "422587007",
+							"display": "Nausea (finding)"
+						}
+					],
+                    "text": "náusea"
+				}
+			],
+			"severity": "moderate"
+		},
+		{
+			"substance": {
+				"coding": [
+					{
+						"system": "http://snomed.info/sct",
+						"code": "763875007",
+						"display": "Product containing sulfonamide (product)"
+					}
+				],
+                "text": "produto contendo sulfonamida"
+			},
+			"manifestation": [
+				{
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "398600002",
+							"display": "Centrifugal rash (finding)"
+						}
+					],
+                    "text": "erupção centrífuga"
+				}
+			],
+			"severity": "moderate"
+		}
+	]
+}

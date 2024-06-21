@@ -1,0 +1,66 @@
+{
+    "resourceType": "Observation",
+    "id": "/*Variável: ID do recurso*/",
+    "status": "registered",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "laboratory",
+                    "display": "Laboratory"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "/*Variável: SCTID, do tipo de observação feita*/",
+                "display": "/*Varible: Nome que representa o código SCTID*/"
+            }
+        ],
+        "text": "/*Variável: Texto que representa o conceito, em português*/"
+    },
+    "subject": 
+    {
+        "reference": "Patient//*Variável: ID do recurso do paciente*/"
+    },
+    "performer": [{
+        "reference": "Practitioner//*Variável: ID do recurso do profissional de saúde*/"
+    }],
+    "method": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "/*Variável: Código LOINC do tipo de método utilizado*/",
+                "display": "/*Varible: Nome que representa o código LOINC*/"
+            }
+        ],
+        "text": "/*Variável: Texto que representa o conceito, em português*/"
+    },
+    "specimen": {
+        "reference": "Specimen//*Variável: ID do recurso de espécime*/"
+    },
+    "component": [
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "371479009",
+                        "display": "Tumor size, largest dimension (observable entity)"
+                    }
+                ],
+                "text": "Tamanho do tumor na maior dimensão"
+            },
+            "valueQuantity": {
+                "value": /*Variável: quantidade (números)*/,
+                "unit": "/*Variável: unidades da quantidade*/",
+                "system": "http://unitsofmeasure.org",
+                "code": "cm"
+            }
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "resourceType": "Specimen",
+    "id": "/*Variável: ID do recurso*/",
+    "identifier": 
+    [
+        {
+            "use": "usual",
+            "value": "/*Variable: identificación de la nuestra o código de barras*/"
+        }
+    ],
+    "type": 
+    {
+        "coding": 
+        [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0487",
+                "code": "/*Variável: Código do tipo de amostra (ex: TUMOR)*/",
+                "display": "/*Variável: Nome que representa o código (ex.: Tumor)*/"
+            }
+        ]
+    },
+    "subject": 
+    {
+        "reference": "Patient//*Variável: ID do recurso do paciente*/"
+    },
+    "receivedTime": "/*Variável: Data e hora do recebimento da amostra (formato: AAAA-MM-DDThh:mm:ss)*/",   
+    "collection": 
+    { 
+        "collectedDateTime": "/*Variável: Data e hora da coleta da amostra (formato: AAAA-MM-DDThh:mm:ss)*/",
+        "bodySite": 
+        {
+            "coding": 
+            [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "/*Variable: SCTID da localização anatômica da amostra*/",
+                    "display": "/*Variável: nome que representa o SCTID*/"
+                }
+            ],
+            "text": "/*Variável: Texto que representa o conceito, em português*/"
+        }
+    }
+}

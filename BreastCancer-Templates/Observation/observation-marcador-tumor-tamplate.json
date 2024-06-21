@@ -1,0 +1,47 @@
+{
+    "resourceType": "Observation",
+    "id": "/*Variável: ID do recurso*/",
+    "status": "registered",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "laboratory",
+                    "display": "Laboratory"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "/*Variável: Código LOINC, do tipo de observação realizada*/",
+                "display": "/*Varible: Nome que representa o código LOINC*/"
+            }
+        ],
+        "text": "/*Variável: Texto que representa o conceito, em português*/"
+    },
+    "subject": 
+    {
+        "reference": "Patient//*Variável: ID do recurso do paciente*/"
+    },
+    "performer": [{
+        "reference": "Practitioner//*Variável: ID do recurso do profissional de saúde*/"
+    }],
+    "effectiveDateTime": "/*Data e hora da ocorrência (formato: AAAA-MM-DDThh:mm:ss)*/",
+    "valueCodeableConcept": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "/*Variável: SCTID do resultado (Positivo ou Negativo)*/",
+                "display": "/*Variável: nome que representa o SCTID*/"
+            }
+        ],
+        "text": "/*Variável: Texto que representa o resultado, em português */"
+    },
+    "specimen": {
+        "reference": "Specimen//*Variável: ID do recurso de espécime*/"
+    }
+}

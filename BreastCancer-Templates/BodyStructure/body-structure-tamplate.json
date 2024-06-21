@@ -1,0 +1,34 @@
+{
+    "resourceType": "BodyStructure",
+    "id": "/*Variável: ID do recurso*/",
+    "active": true,
+    "morphology": 
+    {
+        "coding": 
+        [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "/*Variável: SCTID (ID ou código do Snomed-CT) da morfologia*/",
+                "display": "/*Variável: nome que representa o SCTID*/"
+            }
+        ],
+        "text": "/*Variável: Texto que representa o conceito, em português*/"
+    },
+    "location": 
+    {
+        "coding": 
+        [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "/*Variável: SCTID (ID ou código Snomed-CT) da localização anatômica*/",
+                "display": "/*Variável: nome que representa o SCTID*/"
+            }
+        ],
+        "text": "/*Variável: Texto que representa o conceito, em português*/"
+    },
+    "description": "/*Variável: Texto da descrição fornecida pelo médico*/",
+    "patient": 
+    {
+        "reference": "Patient//*Variável: ID do recurso do paciente*/"
+    }
+}

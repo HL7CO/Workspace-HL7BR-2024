@@ -1,0 +1,48 @@
+{
+    "resourceType": "Procedure",
+    "id": "/*Variável: ID do recurso*/",
+    "status": "completed",
+    "category": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "387713003",
+                "display": "Surgical procedure (procedure)"
+            }
+        ],
+        "text": "cirúrgico"
+    },
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "/*Variable: SCTID do tipo de procedimento realizado*/",
+                "display": "/*Variável: nome que representa o SCTID*/"
+            }
+        ],
+        "text": "/*Variável: Texto que representa o conceito, em português*/"
+    },
+    "subject": {
+        "reference": "Patient//*Variável: ID do recurso do paciente*/"
+    },
+    "performedDateTime": "/*Data e hora da ocorrência (formato: AAAA-MM-DDThh:mm:ss)*/",
+    "performer": [
+        {
+            "actor": {
+                "reference": "Practitioner//*Variável: ID do recurso do profissional de saúde*/"
+            }
+        }
+    ],
+    "bodySite": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "/*Variable: SCTID da localização anatômica do procedimento*/",
+                    "display": "/*Variável: nome que representa o SCTID*/"
+                }
+            ],
+            "text": "/*Variável: Texto que representa o conceito, em português*/"
+        }
+    ]
+}

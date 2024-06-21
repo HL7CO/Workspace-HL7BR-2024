@@ -1,0 +1,38 @@
+{
+    "resourceType": "MedicationRequest",
+    "id": "/*Variável: ID do recurso*/",
+    "status": "active",
+    "medicationCodeableConcept": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "/*Variável: SCTID (ID ou código Snomed-CT) do medicamento*/",
+                "display": "/*Variável: nome que representa o SCTID*/"
+            }
+        ],
+        "text": "/*Variável: Texto do nome do medicamento, em português*/"
+    },
+    "subject": {
+        "reference": "Patient//*Variável: ID do recurso do paciente*/"
+    },
+    "requester": {
+        "reference": "Practitioner//*Variável: ID do recurso do profissional de saúde*/"
+    },
+    "authoredOn": "/*Data e hora da ocorrência (formato: AAAA-MM-DDThh:mm:ss)*/",
+    "dosageInstruction": [
+        {
+            "text": "/*Variável: Texto da posologia*/",
+            "route": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "/*Variável: SCTID (ID ou código Snomed-CT) da via de administração do medicamento*/",
+                        "display": "/*Variável: nome que representa o SCTID*/"
+                    }
+                ],
+                "text": "/*Variável: Texto da via de administração do medicamento, em português*/"
+            }
+        }
+    ]
+
+}

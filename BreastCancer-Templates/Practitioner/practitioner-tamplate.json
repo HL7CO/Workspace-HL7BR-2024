@@ -1,0 +1,124 @@
+{
+    "resourceType": "Practitioner",
+    "identifier": [
+        {
+            "use": "official",
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "PN",
+                        "display": "Person number"
+                    }
+                ]
+            },
+            "system": "http://national-person-identifier-system.example.com",
+            "value": "/*Variável: número de identificação da pessoa*/"
+        }
+    ],
+    "active": true,
+    "name": [
+        {
+            "use": "official",
+            "family": "/*Variável: Sobrenome completo da pessoa*/",
+            "_family": {
+                "extension": [
+                    {
+                        "id": "humanname-fathers-family",
+                        "url": "http://hl7.org/fhir/StructureDefinition/humanname-fathers-family",
+                        "valueString": "/*Variável: sobrenome peternal da pessoa*/"
+                    },
+                    {
+                        "id": "humanname-mothers-family",
+                        "url": "http://hl7.org/fhir/StructureDefinition/humanname-mothers-family",
+                        "valueString": "/*Variável: sobrenome da mãe da pessoa*/"
+                    }
+                ]
+            },
+            "given": [
+                "/*Variável: Nome próprio da pessoa*/",
+                "/*Variável: Nome do meio da pessoa*/"
+            ]
+        }
+    ],
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "/*Variável: número de telefone*/",
+            "use": "home"
+        },
+        {
+            "system": "phone",
+            "value": "/*Variável: número do telefone celular*/",
+            "use": "mobile"
+        },
+        {
+            "system": "email",
+            "value": "/*Variável: endereço de e-mail*/"
+        }
+    ],
+    "gender": "/*Variável: código de gênero*/",
+    "birthDate": "/*Variável: data de nascimento (formato: AAAA-MM-DD)*/",
+    "qualification": [
+        {
+            "identifier": [
+                {
+                    "use": "official",
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                "code": "MD",
+                                "display": "Medical License number"
+                            }
+                        ]
+                    },
+                    "value": "/*Variável: Número da carteira profissional*/"
+                }
+            ],
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "/*Variable: SCTID do tipo de profissão ou especialidade de saúde*/ ",
+                        "display": "/*Variável: nome que representa o SCTID*/"
+                    }
+                ],
+                "text": "/*Variável: Texto que representa a profissão ou especialidade, em português*/"
+            },
+            "period": {
+                "start": "/*Variável: Data de emissão da licença (formato: AAAA-MM-DD)*/"
+            }
+        },
+        {
+            "identifier": [
+                {
+                    "use": "official",
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                "code": "MD",
+                                "display": "Medical License number"
+                            }
+                        ]
+                    },
+                    "value": "/*Variável: Número da carteira profissional*/"
+                }
+            ],
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "/*Variable: SCTID do tipo de profissão ou especialidade de saúde*/ ",
+                        "display": "/*Variável: nome que representa o SCTID*/"
+                    }
+                ],
+                "text": "/*Variável: Texto que representa a profissão ou especialidade, em português*/"
+            },
+            "period": {
+                "start": "/*Variável: Data de emissão da licença (formato: AAAA-MM-DD)*/"
+            }
+        }
+    ]
+}

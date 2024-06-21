@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "bc407506-c119-4fe3-b822-20da694efaaa",
+		"name": "FHIR | HandsOn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9087637",
+		"_collection_link": "https://www.postman.com/hl7co-org/workspace/hl7br-fhir-workshop-breastcancer-2024/collection/9087637-bc407506-c119-4fe3-b822-20da694efaaa?action=share&source=collection_link&creator=9087637"
+	},
+	"item": [
+		{
+			"name": "1 | Patient",
+			"item": [
+				{
+					"name": "Create | Patient | Template",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"Patient\",\n    \"identifier\": [\n        {\n            \"use\": \"official\",\n            \"type\": {\n                \"coding\": [\n                    {\n                        \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                        \"code\": \"PN\",\n                        \"display\": \"Person number\"\n                    }\n                ]\n            },\n            \"system\": \"http://national-person-identifier-system.example.com\",\n            \"value\": \"/*Variável: número de identificação da pessoa*/\"\n        }\n    ],\n    \"active\": true,\n    \"name\": [\n        {\n            \"use\": \"official\",\n            \"family\": \"/*Variável: Sobrenome completo da pessoa*/\",\n            \"_family\": {\n                \"extension\": [\n                    {\n                        \"id\": \"humanname-fathers-family\",\n                        \"url\": \"http://hl7.org/fhir/StructureDefinition/humanname-fathers-family\",\n                        \"valueString\": \"/*Variável: sobrenome peternal da pessoa*/\"\n                    },\n                    {\n                        \"id\": \"humanname-mothers-family\",\n                        \"url\": \"http://hl7.org/fhir/StructureDefinition/humanname-mothers-family\",\n                        \"valueString\": \"/*Variável: sobrenome da mãe da pessoa*/ \"\n                    }\n                ]\n            },\n            \"given\": [\n                \"/*Variável: Nome próprio da pessoa*/\",\n                \"/*Variável: nome do meio da pessoa*/\"\n            ]\n        }\n    ],\n    \"telecom\": [\n        {\n            \"system\": \"phone\",\n            \"value\": \"/*Variável: número de telefone*/\",\n            \"use\": \"home\"\n        },\n        {\n            \"system\": \"phone\",\n            \"value\": \"/*Variável: número do telefone celular*/\",\n            \"use\": \"mobile\"\n        },\n        {\n            \"system\": \"email\",\n            \"value\": \"/*Variável: endereço de e-mail*/\"\n        }\n    ],\n    \"gender\": \"/*Variável: código de gênero*/\",\n    \"birthDate\": \"/*Variável: data de nascimento (formato: AAAA-MM-DD)*/\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{fhirurl}}/Patient/",
+							"host": [
+								"{{fhirurl}}"
+							],
+							"path": [
+								"Patient",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2 | Practitioner",
+			"item": [
+				{
+					"name": "Create | Practitioner | Template",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"Practitioner\",\n    \"identifier\": [\n        {\n            \"use\": \"official\",\n            \"type\": {\n                \"coding\": [\n                    {\n                        \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                        \"code\": \"PN\",\n                        \"display\": \"Person number\"\n                    }\n                ]\n            },\n            \"system\": \"http://national-person-identifier-system.example.com\",\n            \"value\": \"/*Variável: número de identificação da pessoa*/\"\n        }\n    ],\n    \"active\": true,\n    \"name\": [\n        {\n            \"use\": \"official\",\n            \"family\": \"/*Variável: Sobrenome completo da pessoa*/\",\n            \"_family\": {\n                \"extension\": [\n                    {\n                        \"id\": \"humanname-fathers-family\",\n                        \"url\": \"http://hl7.org/fhir/StructureDefinition/humanname-fathers-family\",\n                        \"valueString\": \"/*Variável: sobrenome peternal da pessoa*/\"\n                    },\n                    {\n                        \"id\": \"humanname-mothers-family\",\n                        \"url\": \"http://hl7.org/fhir/StructureDefinition/humanname-mothers-family\",\n                        \"valueString\": \"/*Variável: sobrenome da mãe da pessoa*/\"\n                    }\n                ]\n            },\n            \"given\": [\n                \"/*Variável: Nome próprio da pessoa*/\",\n                \"/*Variável: Nome do meio da pessoa*/\"\n            ]\n        }\n    ],\n    \"telecom\": [\n        {\n            \"system\": \"phone\",\n            \"value\": \"/*Variável: número de telefone*/\",\n            \"use\": \"home\"\n        },\n        {\n            \"system\": \"phone\",\n            \"value\": \"/*Variável: número do telefone celular*/\",\n            \"use\": \"mobile\"\n        },\n        {\n            \"system\": \"email\",\n            \"value\": \"/*Variável: endereço de e-mail*/\"\n        }\n    ],\n    \"gender\": \"/*Variável: código de gênero*/\",\n    \"birthDate\": \"/*Variável: data de nascimento (formato: AAAA-MM-DD)*/\",\n    \"qualification\": [\n        {\n            \"identifier\": [\n                {\n                    \"use\": \"official\",\n                    \"type\": {\n                        \"coding\": [\n                            {\n                                \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                                \"code\": \"MD\",\n                                \"display\": \"Medical License number\"\n                            }\n                        ]\n                    },\n                    \"value\": \"/*Variável: Número da carteira profissional*/\"\n                }\n            ],\n            \"code\": {\n                \"coding\": [\n                    {\n                        \"system\": \"http://snomed.info/sct\",\n                        \"code\": \"/*Variable: SCTID do tipo de profissão ou especialidade de saúde*/ \",\n                        \"display\": \"/*Variável: nome que representa o SCTID*/\"\n                    }\n                ],\n                \"text\": \"/*Variável: Texto que representa a profissão ou especialidade, em português*/\"\n            },\n            \"period\": {\n                \"start\": \"/*Variável: Data de emissão da licença (formato: AAAA-MM-DD)*/\"\n            }\n        },\n        {\n            \"identifier\": [\n                {\n                    \"use\": \"official\",\n                    \"type\": {\n                        \"coding\": [\n                            {\n                                \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                                \"code\": \"MD\",\n                                \"display\": \"Medical License number\"\n                            }\n                        ]\n                    },\n                    \"value\": \"/*Variável: Número da carteira profissional*/\"\n                }\n            ],\n            \"code\": {\n                \"coding\": [\n                    {\n                        \"system\": \"http://snomed.info/sct\",\n                        \"code\": \"/*Variable: SCTID do tipo de profissão ou especialidade de saúde*/ \",\n                        \"display\": \"/*Variável: nome que representa o SCTID*/\"\n                    }\n                ],\n                \"text\": \"/*Variável: Texto que representa a profissão ou especialidade, em português*/\"\n            },\n            \"period\": {\n                \"start\": \"/*Variável: Data de emissão da licença (formato: AAAA-MM-DD)*/\"\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{fhirurl}}/Practitioner",
+							"host": [
+								"{{fhirurl}}"
+							],
+							"path": [
+								"Practitioner"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3 | BodyStructure",
+			"item": [
+				{
+					"name": "Create | BodyStructure | Template",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"BodyStructure\",\n    \"active\": true,\n    \"morphology\": \n    {\n        \"coding\": \n        [\n            {\n                \"system\": \"http://snomed.info/sct\",\n                \"code\": \"/*Variável: SCTID (ID ou código do Snomed-CT) da morfologia*/\",\n                \"display\": \"/*Variável: nome que representa o SCTID*/\"\n            }\n        ],\n        \"text\": \"/*Variável: Texto que representa o conceito, em português*/\"\n    },\n    \"location\": \n    {\n        \"coding\": \n        [\n            {\n                \"system\": \"http://snomed.info/sct\",\n                \"code\": \"/*Variável: SCTID (ID ou código Snomed-CT) da localização anatômica*/\",\n                \"display\": \"/*Variável: nome que representa o SCTID*/\"\n            }\n        ],\n        \"text\": \"/*Variável: Texto que representa o conceito, em português*/\"\n    },\n    \"description\": \"/*Variável: Texto da descrição fornecida pelo médico*/\",\n    \"patient\": \n    {\n        \"reference\": \"Patient//*Variável: ID do recurso do paciente*/\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{fhirurl}}/BodyStructure",
+							"host": [
+								"{{fhirurl}}"
+							],
+							"path": [
+								"BodyStructure"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "4 | Specimen",
+			"item": [
+				{
+					"name": "Create | Specimen | Template",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"Specimen\",\n    \"identifier\": \n    [\n        {\n            \"use\": \"usual\",\n            \"value\": \"/*Variable: identificación de la nuestra o código de barras*/\"\n        }\n    ],\n    \"type\": \n    {\n        \"coding\": \n        [\n            {\n                \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0487\",\n                \"code\": \"/*Variável: Código do tipo de amostra (ex: TUMOR)*/\",\n                \"display\": \"/*Variável: Nome que representa o código (ex.: Tumor)*/\"\n            }\n        ]\n    },\n    \"subject\": \n    {\n        \"reference\": \"Patient//*Variável: ID do recurso do paciente*/\"\n    },\n    \"receivedTime\": \"/*Variável: Data e hora do recebimento da amostra (formato: AAAA-MM-DDThh:mm:ss)*/\",   \n    \"collection\": \n    { \n        \"collectedDateTime\": \"/*Variável: Data e hora da coleta da amostra (formato: AAAA-MM-DDThh:mm:ss)*/\",\n        \"bodySite\": \n        {\n            \"coding\": \n            [\n                {\n                    \"system\": \"http://snomed.info/sct\",\n                    \"code\": \"/*Variable: SCTID da localização anatômica da amostra*/\",\n                    \"display\": \"/*Variável: nome que representa o SCTID*/\"\n                }\n            ],\n            \"text\": \"/*Variável: Texto que representa o conceito, em português*/\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{fhirurl}}/Specimen",
+							"host": [
+								"{{fhirurl}}"
+							],
+							"path": [
+								"Specimen"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "5 | Observation",
+			"item": [
+				{
+					"name": "4.1. | Create | tamanho-tumor | Template",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"Observation\",\n    \"status\": \"registered\",\n    \"category\": [\n        {\n            \"coding\": [\n                {\n                    \"system\": \"http://terminology.hl7.org/CodeSystem/observation-category\",\n                    \"code\": \"laboratory\",\n                    \"display\": \"Laboratory\"\n                }\n            ]\n        }\n    ],\n    \"code\": {\n        \"coding\": [\n            {\n                \"system\": \"http://snomed.info/sct\",\n                \"code\": \"/*Variável: SCTID, do tipo de observação feita*/\",\n                \"display\": \"/*Varible: Nome que representa o código SCTID*/\"\n            }\n        ],\n        \"text\": \"/*Variável: Texto que representa o conceito, em português*/\"\n    },\n    \"subject\": \n    {\n        \"reference\": \"Patient//*Variável: ID do recurso do paciente*/\"\n    },\n    \"performer\": [{\n        \"reference\": \"Practitioner//*Variável: ID do recurso do profissional de saúde*/\"\n    }],\n    \"method\": {\n        \"coding\": [\n            {\n                \"system\": \"http://loinc.org\",\n                \"code\": \"/*Variável: Código LOINC do tipo de método utilizado*/\",\n                \"display\": \"/*Varible: Nome que representa o código LOINC*/\"\n            }\n        ],\n        \"text\": \"/*Variável: Texto que representa o conceito, em português*/\"\n    },\n    \"specimen\": {\n        \"reference\": \"Specimen//*Variável: ID do recurso de espécime*/\"\n    },\n    \"component\": [\n        {\n            \"code\": {\n                \"coding\": [\n                    {\n                        \"system\": \"http://snomed.info/sct\",\n                        \"code\": \"371479009\",\n                        \"display\": \"Tumor size, largest dimension (observable entity)\"\n                    }\n                ],\n                \"text\": \"Tamanho do tumor na maior dimensão\"\n            },\n            \"valueQuantity\": {\n                \"value\": /*Variável: quantidade (números)*/,\n                \"unit\": \"/*Variável: unidades da quantidade*/\",\n                \"system\": \"http://unitsofmeasure.org\",\n                \"code\": \"cm\"\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{fhirurl}}/Observation",
+							"host": [
+								"{{fhirurl}}"
+							],
+							"path": [
+								"Observation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4.2 | Create | marcador-tumor | Template Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"Observation\",\n    \"status\": \"registered\",\n    \"category\": [\n        {\n            \"coding\": [\n                {\n                    \"system\": \"http://terminology.hl7.org/CodeSystem/observation-category\",\n                    \"code\": \"laboratory\",\n                    \"display\": \"Laboratory\"\n                }\n            ]\n        }\n    ],\n    \"code\": {\n        \"coding\": [\n            {\n                \"system\": \"http://loinc.org\",\n                \"code\": \"/*Variável: Código LOINC, do tipo de observação realizada*/\",\n                \"display\": \"/*Varible: Nome que representa o código LOINC*/\"\n            }\n        ],\n        \"text\": \"/*Variável: Texto que representa o conceito, em português*/\"\n    },\n    \"subject\": \n    {\n        \"reference\": \"Patient//*Variável: ID do recurso do paciente*/\"\n    },\n    \"performer\": [{\n        \"reference\": \"Practitioner//*Variável: ID do recurso do profissional de saúde*/\"\n    }],\n    \"effectiveDateTime\": \"/*Data e hora da ocorrência (formato: AAAA-MM-DDThh:mm:ss)*/\",\n    \"valueCodeableConcept\": {\n        \"coding\": [\n            {\n                \"system\": \"http://snomed.info/sct\",\n                \"code\": \"/*Variável: SCTID do resultado (Positivo ou Negativo)*/\",\n                \"display\": \"/*Variável: nome que representa o SCTID*/\"\n            }\n        ],\n        \"text\": \"/*Variável: Texto que representa o resultado, em português */\"\n    },\n    \"specimen\": {\n        \"reference\": \"Specimen//*Variável: ID do recurso de espécime*/\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{fhirurl}}/Observation",
+							"host": [
+								"{{fhirurl}}"
+							],
+							"path": [
+								"Observation"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "6 | Procedure",
+			"item": [
+				{
+					"name": "Create | Procedure | Template",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"Procedure\",\n    \"id\": \"/*Variável: ID do recurso*/\",\n    \"status\": \"completed\",\n    \"category\": {\n        \"coding\": [\n            {\n                \"system\": \"http://snomed.info/sct\",\n                \"code\": \"387713003\",\n                \"display\": \"Surgical procedure (procedure)\"\n            }\n        ],\n        \"text\": \"cirúrgico\"\n    },\n    \"code\": {\n        \"coding\": [\n            {\n                \"system\": \"http://snomed.info/sct\",\n                \"code\": \"/*Variable: SCTID do tipo de procedimento realizado*/\",\n                \"display\": \"/*Variável: nome que representa o SCTID*/\"\n            }\n        ],\n        \"text\": \"/*Variável: Texto que representa o conceito, em português*/\"\n    },\n    \"subject\": {\n        \"reference\": \"Patient//*Variável: ID do recurso do paciente*/\"\n    },\n    \"performedDateTime\": \"/*Data e hora da ocorrência (formato: AAAA-MM-DDThh:mm:ss)*/\",\n    \"performer\": [\n        {\n            \"actor\": {\n                \"reference\": \"Practitioner//*Variável: ID do recurso do profissional de saúde*/\"\n            }\n        }\n    ],\n    \"bodySite\": [\n        {\n            \"coding\": [\n                {\n                    \"system\": \"http://snomed.info/sct\",\n                    \"code\": \"/*Variable: SCTID da localização anatômica do procedimento*/\",\n                    \"display\": \"/*Variável: nome que representa o SCTID*/\"\n                }\n            ],\n            \"text\": \"/*Variável: Texto que representa o conceito, em português*/\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{fhirurl}}/Procedure",
+							"host": [
+								"{{fhirurl}}"
+							],
+							"path": [
+								"Procedure"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "7 | MedicationRequest",
+			"item": [
+				{
+					"name": "Create | MedicationRequest | Template",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"MedicationRequest\",\n    \"status\": \"active\",\n    \"medicationCodeableConcept\": {\n        \"coding\": [\n            {\n                \"system\": \"http://snomed.info/sct\",\n                \"code\": \"/*Variável: SCTID (ID ou código Snomed-CT) do medicamento*/\",\n                \"display\": \"/*Variável: nome que representa o SCTID*/\"\n            }\n        ],\n        \"text\": \"/*Variável: Texto do nome do medicamento, em português*/\"\n    },\n    \"subject\": {\n        \"reference\": \"Patient//*Variável: ID do recurso do paciente*/\"\n    },\n    \"requester\": {\n        \"reference\": \"Practitioner//*Variável: ID do recurso do profissional de saúde*/\"\n    },\n    \"authoredOn\": \"/*Data e hora da ocorrência (formato: AAAA-MM-DDThh:mm:ss)*/\",\n    \"dosageInstruction\": [\n        {\n            \"text\": \"/*Variável: Texto da posologia*/\",\n            \"route\": {\n                \"coding\": [\n                    {\n                        \"system\": \"http://snomed.info/sct\",\n                        \"code\": \"/*Variável: SCTID (ID ou código Snomed-CT) da via de administração do medicamento*/\",\n                        \"display\": \"/*Variável: nome que representa o SCTID*/\"\n                    }\n                ],\n                \"text\": \"/*Variável: Texto da via de administração do medicamento, em português*/\"\n            }\n        }\n    ]\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{fhirurl}}/MedicationRequest",
+							"host": [
+								"{{fhirurl}}"
+							],
+							"path": [
+								"MedicationRequest"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "7 | MedicationAdministration",
+			"item": [
+				{
+					"name": "Create | MedicationAdministration | Template",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"MedicationAdministration\",\n    \"status\": \"completed\",\n    \"medicationCodeableConcept\": {\n        \"coding\": [\n            {\n                \"system\": \"http://snomed.info/sct\",\n                \"code\": \"/*Variável: SCTID (ID ou código Snomed-CT) do medicamento*/\",\n                \"display\": \"/*Variável: nome que representa o SCTID*/\"\n            }\n        ],\n        \"text\": \"/*Variável: Texto do nome do medicamento, em português*/\"\n    },\n    \"subject\": {\n        \"reference\": \"Patient//*Variável: ID do recurso do paciente*/\"\n    },\n    \"effectiveDateTime\": \"/*Data e hora da ocorrência (formato: AAAA-MM-DDThh:mm:ss)*/\",\n    \"performer\": [\n        {\n            \"actor\": {\n                \"reference\": \"Practitioner//*Variável: ID do recurso do profissional de saúde*/\"\n            }\n        }\n    ],\n    \"note\": [\n        {\n            \"text\": \"/*Variável: Texto da nota clínica*/\"\n        }\n    ],\n    \"dosage\": {\n        \"text\": \"/*Variável: Texto da posologia*/\",\n        \"route\": {\n            \"coding\": [\n                {\n                    \"system\": \"http://snomed.info/sct\",\n                    \"code\": \"/*Variável: SCTID (ID ou código Snomed-CT) da via de administração do medicamento*/\",\n                    \"display\": \"/*Variável: nome que representa o SCTID*/\"\n                }\n            ],\n            \"text\": \"/*Variável: Texto da via de administração do medicamento, em português*/\"\n        },\n        \"dose\": {\n            \"value\": /*Variável: quantidade (números)*/,\n            \"unit\": \"/*Variável: unidades da quantidade*/\"\n        }\n    }\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{fhirurl}}/MedicationAdministration",
+							"host": [
+								"{{fhirurl}}"
+							],
+							"path": [
+								"MedicationAdministration"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "0 | CapabilityStatement",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{fhirurl}}/metadata",
+					"host": [
+						"{{fhirurl}}"
+					],
+					"path": [
+						"metadata"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

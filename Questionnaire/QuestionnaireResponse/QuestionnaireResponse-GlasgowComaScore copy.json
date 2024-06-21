@@ -1,0 +1,69 @@
+{
+    "resourceType": "QuestionnaireResponse",
+    "questionnaire": "Questionnaire/GlasgowComaScore",
+    "status": "completed",
+    "subject": {
+      "reference": "Patient/2b79317c-9e4b-4d0e-9230-ef67e16ec67b",
+      "display": "Johnny Ramone"
+    },
+    "authored": "2024-06-21T14:44:00-03:00",
+    "source": {
+      "reference": "Practitioner/0e75c6ef-c0fa-46c3-9ad3-dd4c004d1101"
+    },
+    "item": [
+      {
+        "linkId": "1.1",
+        "answer": [
+          {
+            "valueCoding": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 4
+                }
+              ],
+              "system": "http://loinc.org",
+              "code": "LA6560-2",
+              "display": "Confused"
+            }
+          }
+        ]
+      },
+      {
+        "linkId": "1.2",
+        "answer": [
+          {
+            "valueCoding": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 5
+                }
+              ],
+              "system": "http://loinc.org",
+              "code": "LA6566-9",
+              "display": "Localizing pain"
+            }
+          }
+        ]
+      },
+      {
+        "linkId": "1.3",
+        "answer": [
+          {
+            "valueCoding": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 4
+                }
+              ],
+              "system": "http://loinc.org",
+              "code": "LA6556-0",
+              "display": "Eyes open spontaneously"
+            }
+          }
+        ]
+      }
+    ]
+  }

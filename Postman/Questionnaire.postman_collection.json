@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "777baae7-1add-4ce0-8bcb-ca5950a402f8",
+		"name": "Questionnaire",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9087637",
+		"_collection_link": "https://www.postman.com/hl7co-org/workspace/hl7br-fhir-workshop-breastcancer-2024/collection/9087637-777baae7-1add-4ce0-8bcb-ca5950a402f8?action=share&source=collection_link&creator=9087637"
+	},
+	"item": [
+		{
+			"name": "Examples",
+			"item": [
+				{
+					"name": "Read | Questionnaire | GlasgowComaScore",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{fhirurl}}/Questionnaire/GlasgowComaScore",
+							"host": [
+								"{{fhirurl}}"
+							],
+							"path": [
+								"Questionnaire",
+								"GlasgowComaScore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read | QuestionnaireResponse | 44766691",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{fhirurl}}/QuestionnaireResponse/44766691",
+							"host": [
+								"{{fhirurl}}"
+							],
+							"path": [
+								"QuestionnaireResponse",
+								"44766691"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

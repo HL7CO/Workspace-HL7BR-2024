@@ -1,0 +1,63 @@
+{
+    "resourceType": "Patient",
+    "id": "bb5ae35f-d7e7-4a24-81e6-7bf62811d52d",
+    "identifier": [
+        {
+            "use": "official",
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "PN",
+                        "display": "Person number"
+                    }
+                ]
+            },
+            "system": "http://national-person-identifier-system.example.com",
+            "value": "236498721639487"
+        }
+    ],
+    "active": true,
+    "name": [
+        {
+            "use": "official",
+            "family": "Silva Santos",
+            "_family": {
+                "extension": [
+                    {
+                        "id": "humanname-fathers-family",
+                        "url": "http://hl7.org/fhir/StructureDefinition/humanname-fathers-family",
+                        "valueString": "Silva"
+                    },
+                    {
+                        "id": "humanname-mothers-family",
+                        "url": "http://hl7.org/fhir/StructureDefinition/humanname-mothers-family",
+                        "valueString": "Santos"
+                    }
+                ]
+            },
+            "given": [
+                "María",
+                "Clara"
+            ]
+        }
+    ],
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "+55(11)333-4444",
+            "use": "home"
+        },
+        {
+            "system": "phone",
+            "value": "+55(9)111-2222",
+            "use": "mobile"
+        },
+        {
+            "system": "email",
+            "value": "maria.silva@example.com"
+        }
+    ],
+    "gender": "female",
+    "birthDate": "1982-11-19"
+}

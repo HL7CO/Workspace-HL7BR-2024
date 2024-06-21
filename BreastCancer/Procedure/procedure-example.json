@@ -1,0 +1,48 @@
+{
+    "resourceType": "Procedure",
+    "id": "ab34d012-aaec-48a5-a973-1656372c3365",
+    "status": "completed",
+    "category": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "387713003",
+                "display": "Surgical procedure (procedure)"
+            }
+        ],
+        "text": "cirúrgico"
+    },
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "64368001",
+                "display": "Excision of part of breast (procedure)"
+            }
+        ],
+        "text": "mastectomia parcial "
+    },
+    "subject": {
+        "reference": "Patient/bb5ae35f-d7e7-4a24-81e6-7bf62811d52d"
+    },
+    "performedDateTime": "2022-04-11T08:41:22-03:00",
+    "performer": [
+        {
+            "actor": {
+                "reference": "Practitioner/dr-gregorio-casas"
+            }
+        }
+    ],
+    "bodySite": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "80248007",
+                    "display": "Left breast structure (body structure)"
+                }
+            ],
+            "text": "estrutura da mama esquerda"
+        }
+    ]
+}

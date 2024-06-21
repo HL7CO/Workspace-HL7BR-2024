@@ -1,0 +1,125 @@
+{
+    "resourceType": "Practitioner",
+    "id": "dr-gregorio-casas",
+    "identifier": [
+        {
+            "use": "official",
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "PN",
+                        "display": "Person number"
+                    }
+                ]
+            },
+            "system": "http://national-person-identifier-system.example.com",
+            "value": "6758493012"
+        }
+    ],
+    "active": true,
+    "name": [
+        {
+            "use": "official",
+            "family": "Casas Silva",
+            "_family": {
+                "extension": [
+                    {
+                        "id": "humanname-fathers-family",
+                        "url": "http://hl7.org/fhir/StructureDefinition/humanname-fathers-family",
+                        "valueString": "Casas"
+                    },
+                    {
+                        "id": "humanname-mothers-family",
+                        "url": "http://hl7.org/fhir/StructureDefinition/humanname-mothers-family",
+                        "valueString": "Silva"
+                    }
+                ]
+            },
+            "given": [
+                "José",
+                "Gregorio"
+            ]
+        }
+    ],
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "+55(11)761-9876",
+            "use": "home"
+        },
+        {
+            "system": "phone",
+            "value": "+55(9)123-4567",
+            "use": "mobile"
+        },
+        {
+            "system": "email",
+            "value": "gregorio.casas@example.com"
+        }
+    ],
+    "gender": "male",
+    "birthDate": "1991-06-05",
+    "qualification": [
+        {
+            "identifier": [
+                {
+                    "use": "official",
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                "code": "MD",
+                                "display": "Medical License number"
+                            }
+                        ]
+                    },
+                    "value": "TP-6758493012"
+                }
+            ],
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "59058001",
+                        "display": "General physician (occupation)"
+                    }
+                ],
+                "text": "Médico clínico geral"
+            },
+            "period": {
+                "start": "2006-09-01"
+            }
+        },
+        {
+            "identifier": [
+                {
+                    "use": "official",
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                "code": "MD",
+                                "display": "Medical License number"
+                            }
+                        ]
+                    },
+                    "value": "TP-86876876"
+                }
+            ],
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "310512001",
+                        "display": "Medical oncologist (occupation)"
+                    }
+                ],
+                "text": "Médico oncologista"
+            },
+            "period": {
+                "start": "2015-03-14"
+            }
+        }
+    ]
+}

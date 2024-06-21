@@ -1,0 +1,38 @@
+{
+    "resourceType": "MedicationRequest",
+    "id": "e37a0d57-ae75-45c8-b042-fb42b5e6d733",
+    "status": "active",
+    "medicationCodeableConcept": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "386910003",
+                "display": "Anastrozole (substance)"
+            }
+        ],
+        "text": "Anastrozol"
+    },
+    "subject": {
+        "reference": "Patient/bb5ae35f-d7e7-4a24-81e6-7bf62811d52d"
+    },
+    "requester": {
+        "reference": "Practitioner/dr-gregorio-casas"
+    },
+    "authoredOn": "2022-04-01T10:12:14-03:00",
+    "dosageInstruction": [
+        {
+            "text": "1 cápsula de 1mg diariamente, por 84 dias.",
+            "route": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "26643006",
+                        "display": "Oral route (qualifier value)"
+                    }
+                ],
+                "text": "Via de administração oral"
+            }
+        }
+    ]
+
+}

@@ -1,0 +1,47 @@
+{
+    "resourceType": "Observation",
+    "id": "657ec3de-4ff5-426e-8dfc-bd48fbbd3343",
+    "status": "registered",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "laboratory",
+                    "display": "Laboratory"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "85337-4",
+                "display": "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+            }
+        ],
+        "text": "Antígeno do receptor de estrogênio em amostra de câncer de mama por coloração imuno-histoquímica"
+    },
+    "subject": 
+    {
+        "reference": "Patient/bb5ae35f-d7e7-4a24-81e6-7bf62811d52d"
+    },
+    "performer": [{
+        "reference": "Practitioner/dr-gregorio-casas"
+    }],
+    "effectiveDateTime": "2022-03-16T10:12:22-03:00",
+    "valueCodeableConcept": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "10828004",
+                "display": "Positive (qualifier value)"
+            }
+        ],
+        "text": "Positivo"
+    },
+    "specimen": {
+        "reference": "Specimen/585d5315-8034-47f8-becd-1485983d7a5b"
+    }
+}
